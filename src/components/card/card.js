@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import cardStyle from './card.module.scss';
 // import { CardWrapper } from './card.styled';
 
 const Card = (props) => {
-    const classes = 'card ' + props.className;
+    // const classes = 'card card-shadow ' + props.className;
 
     return (
-        <div className={classes}>
+        <div className={cardStyle.cardShadow}>
           {props.children}
         </div>
     );

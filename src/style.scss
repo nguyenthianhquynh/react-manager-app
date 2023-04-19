@@ -1,2 +1,64 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+//set width of side-bar
+$sidebar-width: 250px;
+$sidebar-width-mobile: 40px;
+$topbar-height: 40px;
+
+.w-contain-icon{
+    height: $topbar-height;
+}
+
+.left-side {
+    width: $sidebar-width;
+    float: left;
+}
+
+.right-side {
+    width: calc(99% - #{$sidebar-width});
+    float: right;
+}
+
+.top-bar{
+    width: 100%;
+    height: $topbar-height
+}
+
+.main{
+    width: 100%;
+    height: calc(100% - #{$topbar-height});
+    
+    $height-main: calc(100% - #{$topbar-height});
+    
+    
+    & .top-main{
+        height:30%;
+        border-bottom: 1px solid black;
+    }
+
+    & .bottom-main{
+        height: 70%;
+        border-bottom: 1px solid black;
+    }
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+@include media-breakpoint-down(md) {
+    .left-side {
+        width: $sidebar-width-mobile;
+        float: left;
+    }
+
+    .right-side {
+        width: calc(100% - #{$sidebar-width-mobile});
+        float: right;
+    }
+}
+

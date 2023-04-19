@@ -1,30 +1,18 @@
 import "./App.css";
-import Card from "../src/components/card/card";
-import ListItem from "../src/components/list-item/list-item";
+import LayoutContainer from "../src/components/layout-container/layout-container";
+import Login from "../src/pages/login/login";
+import React from "react";
+import AuthContext from "../src/store/Auth-context";
+
 
 function App() {
-  let cards = [];
-  for (let index = 0; index < 10; index++) {
-    cards.push(<Card title={`Card Title ${index}`} />);
-  }
+  const ctx = React.useContext(AuthContext);
 
-  const items = [
-    {
-      id:0,
-      date: '2021-01-01',
-      title: "title 1",
-      description: "description 1",
-    }
-  ]
+  const content = ctx.isLoggedIn ? <LayoutContainer /> : <Login onLogin={ctx.onLogin}/>;
 
   return (
-    //loop 1->10
     <div className="App">
-      <li className="list-group-item">{cards}</li>
-
-      <hr />
-      <h1>concept of composition</h1>
-      <ListItem items={items}/>
+      {content}
     </div>
   );
 }
