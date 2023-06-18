@@ -13,7 +13,7 @@ const Login = (props) => {
       <div className="authentication-wrapper authentication-basic container-p-y">
         <div className="authentication-inner">
           <Card>
-            <div className="card-body">
+            <div className="card-body p-4">
               <div className="text-center py-4">
                 <a href="index.html" className="app-brand-link gap-2">
                   {/* ICON */}

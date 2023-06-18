@@ -4,6 +4,7 @@ import Card from "../card/card";
 import Date from "../date/date";
 
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 function Item(props) {
   const [showConfirmModal, setShowConfirmModal] = useState(false);

@@ -6,6 +6,7 @@ import {
   faFire,
   faCake,
 } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 const Sidebar = () => {
   const [mobile, setMobile] = useState(window.innerWidth < 768);
